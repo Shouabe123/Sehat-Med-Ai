@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="/doctor-try-confirm/doctor.html" onclick="showSection('xnx')">Patient</a></li>
+            <li><a href="#" onclick="showSection('xxx')">XXX</a></li>
+            <li><a href="#" onclick="showSection('xaga')">XAGA</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h1>Welcome to Doctor Panel</h1>
+        </section>
+        <section id="xnx" class="hidden">
+            <a href=""><button>Patient waiting list</button></a>
+            <p>Content for XNX.</p>
+        </section>
+        <section id="xxx" class="hidden">
+            <h1>XXX Section</h1>
+            <p>Content for XXX.</p>
+        </section>
+        <section id="xaga" class="hidden">
+            <h1>XAGA Section</h1>
+            <p>Content for XAGA.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

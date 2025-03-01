@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Verification Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Shop Verification Status</h1>
+        <button onclick="window.location.href='register-shop.html'">🏠 Back to Registration</button>
+    </nav>
+
+    <div class="container">
+        <h2>Shop Approval Status</h2>
+        <p id="verification-message"></p>
+    </div>
+
+    <script >
+        let shopStatus = JSON.parse(localStorage.getItem("shopStatus")) || { status: "Pending", message: "Waiting for admin approval." };
+
+function displayShopStatus() {
+    let messageElement = document.getElementById("verification-message");
+
+    if (shopStatus.status === "Approved") {
+        messageElement.innerHTML = `<strong style="color:green;">✅ Your shop has been approved!</strong>`;
+    } else if (shopStatus.status === "Rejected") {
+        messageElement.innerHTML = `<strong style="color:red;">❌ Authorization canceled. Contact the admin.</strong>`;
+    } else {
+        messageElement.innerHTML = `<strong style="color:blue;">⏳ Waiting for admin approval...</strong>`;
+    }
+}
+
+window.onload = displayShopStatus;
+
+    </script>
+</body>
+</html>

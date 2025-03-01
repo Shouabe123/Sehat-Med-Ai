@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Book an Appointment</h1>
+        <button class="nav-btn" onclick="showBookedAppointments()">Appointments Booked</button>
+    </nav>
+
+    <div class="container">
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="phone" placeholder="Phone Number">
+        
+        <label for="day">Select Day:</label>
+        <select id="day">
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+
+        <label for="time">Select Time Slot:</label>
+        <select id="time">
+            <option value="1-3 PM">1-3 PM</option>
+            <option value="6-9 PM">6-9 PM</option>
+        </select>
+
+        <button onclick="bookAppointment()">Book & Pay</button>
+    </div>
+
+    <div id="booked-appointments" class="container" style="display: none;">
+        <h2>Appointments Booked</h2>
+        <div id="appointment-list"></div>
+    </div>
+
+    <!-- Cancel Popup -->
+    <div id="cancel-popup" class="popup">
+        <h2>Why are you canceling?</h2>
+        <select id="cancel-reason">
+            <option value="Not Present">Not Present</option>
+            <option value="Going Somewhere">Going Somewhere</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="text" id="other-reason" placeholder="Enter reason (if Other)" style="display:none;">
+        <button onclick="confirmCancellation()">Confirm Cancel</button>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>
+
+
+

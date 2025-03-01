@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home Section Styles */
+  .home-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .home-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  /* Doctors and Medicine Sections */
+  .doctors-section, .medicine-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .doctors-section h2, .medicine-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  /* Scrollable Container */
+  .scrollable-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #007bff #f4f4f9; /* For Firefox */
+  }
+  
+  .scrollable-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .scrollable-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+  }
+  
+  .scrollable-container::-webkit-scrollbar-track {
+    background-color: #f4f4f9;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .card button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Doctor Card Specific Styles */
+  .doctor-card {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+    color: white;
+  }
+  
+  /* Medicine Card Specific Styles */
+  .medicine-card {
+    background: linear-gradient(135deg, #28a745, #90ee90);
+    color: white;
+  }
+  /* Lab Test Card Specific Styles */
+  .lab-card {
+    background: linear-gradient(135deg, #ff6f61, #ffcccb);
+    color: white;
+  }
+  /* Lab Tests Section Styles */
+  .lab-tests-section {
+    text-align: center; /* Center the title and content */
+    padding: 50px 20px;
+  }
+  
+  .lab-tests-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    position: relative; /* For absolute positioning of the phrase */
+  }
+  
+  .lab-tests-section h2::after {
+    /* Add the phrase "Test Lab" */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the phrase horizontally */
+    bottom: -20px; /* Adjust the vertical position */
+    font-size: 24px;
+    color: #007bff; /* Change color as needed */
+    font-weight: bold;
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close:hover {
+    color: #007bff;
+  }
+  
+  .login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-options button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-options button:hover {
+    background-color: #0056b3;
+  }

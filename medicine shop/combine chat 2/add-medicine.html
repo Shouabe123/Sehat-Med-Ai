@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medicine</title>
+    <link rel="stylesheet" href="owner.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Add Medicine</h1>
+        <button onclick="window.location.href='owner.html'">🏠 Back to Admin Panel</button> <!-- Go back to owner panel -->
+    </nav>
+
+    <div class="container">
+        <h2>Enter Medicine Details</h2>
+        <input type="text" id="med-name" placeholder="Medicine Name">
+        <input type="number" id="med-price" placeholder="Price">
+        <input type="file" id="med-image" accept="image/*">
+        <button onclick="addMedicine()">Add</button>
+    </div>
+
+    <script src="add-medicine.js"></script>
+</body>
+</html>

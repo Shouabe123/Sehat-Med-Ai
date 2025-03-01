@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#doctor-profiles {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.profile-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

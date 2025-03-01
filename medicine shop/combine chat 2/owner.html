@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Owner</title>
+    <link rel="stylesheet" href="owner.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Admin Panel</h1>
+        <button onclick="showOrderList()">📦 View Orders</button>
+        <button onclick="window.location.href='add-medicine.html'">➕ Add Medicine</button> <!-- Redirects to new page -->
+    </nav>
+
+    <div class="container">
+        <h2>Order List</h2>
+        <div id="order-items"></div>
+    </div>
+
+    <script src="owner.js"></script>
+</body>
+</html>
+
+

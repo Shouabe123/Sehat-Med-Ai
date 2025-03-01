@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Shop - User</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+
+    <nav>
+        <a href="/patient/patient_main/patient_main.html"><button>Home</button></a>
+        <input type="text" id="search" placeholder="Search medicines..." onkeyup="searchMedicine()">
+        <div class="cart" onclick="showCart()">🛒 <span id="cart-count">0</span></div>
+        <button onclick="window.location.href='orders.html'">📄 View Orders</button> <!-- Redirects to orders page -->
+    </nav>
+
+    <div class="container">
+        <h2>Available Medicines</h2>
+        <div id="medicine-list"></div>
+    </div>
+
+    <!-- Cart Modal --> 
+    <div id="cart-modal" class="modal">1
+        <div class="modal-content">
+            <h2>Purchase Details</h2>
+            <div id="cart-items"></div>
+            <p><strong>Total Price:</strong> $<span id="total-price">0</span></p>
+            <p id="shipping-charge"></p>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+            <button onclick="resetCart()">Reset Cart</button>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>
+
+
+
